@@ -1,0 +1,455 @@
+:root {
+  color-scheme: light;
+  --bg: #f3efe5;
+  --bg-elevated: rgba(255, 250, 243, 0.88);
+  --surface: #fff8ef;
+  --surface-strong: #f4e8d4;
+  --text: #1b1812;
+  --muted: #675f54;
+  --line: rgba(27, 24, 18, 0.12);
+  --accent: #d85f35;
+  --accent-strong: #9f3f1f;
+  --accent-soft: rgba(216, 95, 53, 0.12);
+  --shadow: 0 20px 60px rgba(57, 35, 18, 0.12);
+  --font-display: Georgia, "Times New Roman", serif;
+  --font-body: "Segoe UI", sans-serif;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #131416;
+  --bg-elevated: rgba(22, 24, 27, 0.84);
+  --surface: #1d2024;
+  --surface-strong: #292d33;
+  --text: #f6f0e8;
+  --muted: #b3ab9e;
+  --line: rgba(255, 255, 255, 0.1);
+  --accent: #ff8e63;
+  --accent-strong: #ffb08f;
+  --accent-soft: rgba(255, 142, 99, 0.16);
+  --shadow: 0 20px 60px rgba(0, 0, 0, 0.28);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background:
+    radial-gradient(circle at top left, rgba(216, 95, 53, 0.18), transparent 28%),
+    radial-gradient(circle at 85% 15%, rgba(60, 123, 168, 0.18), transparent 24%),
+    var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+.pageFrame {
+  min-height: 100vh;
+}
+
+.shell {
+  width: min(1120px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.siteHeader {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(16px);
+  background: var(--bg-elevated);
+  border-bottom: 1px solid var(--line);
+}
+
+.navShell {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.brandMark {
+  display: grid;
+  gap: 0.15rem;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+}
+
+.brandKicker,
+.eyebrow,
+.cardIndex,
+.footerEyebrow,
+.panelLabel {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.mainNav {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.navLink {
+  padding: 0.5rem 0.85rem;
+  border-radius: 999px;
+  transition: background-color 180ms ease, color 180ms ease;
+}
+
+.navLink:hover,
+.navLink.active {
+  background: var(--accent-soft);
+  color: var(--accent-strong);
+}
+
+.themeToggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.55rem 0.85rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--text);
+  cursor: pointer;
+}
+
+.themeToggleTrack {
+  width: 2.8rem;
+  height: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.15rem;
+  border-radius: 999px;
+  background: var(--accent-soft);
+}
+
+.themeToggleThumb {
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  background: var(--accent);
+  transform: translateX(0);
+  transition: transform 180ms ease;
+}
+
+:root[data-theme="dark"] .themeToggleThumb {
+  transform: translateX(1.25rem);
+}
+
+.heroSection,
+.section {
+  padding: 5rem 0;
+}
+
+.pageTop {
+  padding-top: 3rem;
+}
+
+.heroGrid,
+.splitSection,
+.contactLayout,
+.footerGrid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.heroGrid {
+  grid-template-columns: 1.3fr 0.9fr;
+  align-items: stretch;
+}
+
+.heroCopy,
+.heroPanel,
+.contentCard,
+.ctaPanel,
+.contactForm,
+.statCard {
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.heroCopy {
+  padding: 2rem;
+}
+
+.heroCopy h1,
+.sectionIntro h2,
+.siteFooter h2,
+.ctaPanel h2 {
+  margin: 0.2rem 0 0.8rem;
+  font-family: var(--font-display);
+  line-height: 1.02;
+}
+
+.heroCopy h1 {
+  font-size: clamp(3rem, 7vw, 5.8rem);
+  max-width: 12ch;
+}
+
+.lede,
+.sectionIntro p,
+.contentCard p,
+.contactForm label,
+.footerMeta p {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.heroActions,
+.cardGrid,
+.statGrid {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.buttonPrimary,
+.buttonSecondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3rem;
+  padding: 0.8rem 1.15rem;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.buttonPrimary {
+  background: var(--accent);
+  color: #fff7f1;
+}
+
+.buttonSecondary {
+  border: 1px solid var(--line);
+  background: transparent;
+}
+
+.heroPanel {
+  padding: 1.5rem;
+  background:
+    linear-gradient(180deg, rgba(216, 95, 53, 0.14), transparent),
+    var(--surface);
+}
+
+.heroStack {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.metricCard,
+.statCard {
+  padding: 1rem 1.1rem;
+  background: var(--bg);
+  border-radius: 22px;
+  border: 1px solid var(--line);
+}
+
+.metricCard span,
+.statCard span {
+  display: block;
+  color: var(--muted);
+}
+
+.metricCard strong,
+.statCard strong {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.sectionIntro {
+  max-width: 52rem;
+  margin-bottom: 1.5rem;
+}
+
+.sectionIntro h2 {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  max-width: 14ch;
+}
+
+.cardGrid,
+.twoColumnGrid {
+  display: grid;
+  gap: 1.2rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.twoColumnGrid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.contentCard,
+.contactForm,
+.ctaPanel {
+  padding: 1.5rem;
+}
+
+.serviceCard,
+.projectCard,
+.featureBand {
+  min-height: 100%;
+}
+
+.featureBand {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  align-items: center;
+}
+
+.accentSection .contentCard {
+  background:
+    linear-gradient(180deg, rgba(60, 123, 168, 0.12), transparent),
+    var(--surface);
+}
+
+.splitSection {
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+}
+
+.statGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.ctaSection {
+  padding-top: 0;
+}
+
+.contactPreviewSection {
+  padding-top: 0;
+}
+
+.ctaPanel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background:
+    linear-gradient(135deg, rgba(216, 95, 53, 0.16), rgba(60, 123, 168, 0.08)),
+    var(--surface);
+}
+
+.stack {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.contactLayout {
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: start;
+}
+
+.contactForm {
+  display: grid;
+  gap: 1rem;
+}
+
+.contactForm label {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.contactForm input,
+.contactForm textarea {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  background: var(--bg);
+  color: var(--text);
+}
+
+.contactSidebar {
+  display: grid;
+  gap: 1rem;
+}
+
+.mapPlaceholder {
+  min-height: 16rem;
+  background:
+    linear-gradient(180deg, rgba(60, 123, 168, 0.16), transparent),
+    var(--surface);
+}
+
+.siteFooter {
+  padding: 2rem 0 3rem;
+}
+
+.footerGrid {
+  grid-template-columns: 1.5fr 0.8fr 0.8fr;
+  padding-top: 2rem;
+  border-top: 1px solid var(--line);
+}
+
+.footerLinks {
+  display: grid;
+  gap: 0.7rem;
+}
+
+@media (max-width: 920px) {
+  .heroGrid,
+  .splitSection,
+  .contactLayout,
+  .featureBand,
+  .footerGrid,
+  .twoColumnGrid,
+  .cardGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .navShell,
+  .ctaPanel {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .mainNav {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .heroSection,
+  .section {
+    padding: 4rem 0;
+  }
+
+  .shell {
+    width: min(100% - 1.25rem, 1120px);
+  }
+
+  .heroCopy,
+  .heroPanel,
+  .contentCard,
+  .contactForm,
+  .ctaPanel {
+    border-radius: 22px;
+  }
+}
