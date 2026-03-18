@@ -15,6 +15,48 @@ Designed by **NestlyDigital** to help agencies, freelancers, and businesses crea
 
 ---
 
+## 🖥 Live Demo
+
+[https://nextjs-client-website-starter.vercel.app/](https://nextjs-client-website-starter.vercel.app/)
+
+Experience a fully functional modern business website built with Next.js and ready to customize for client projects.
+
+---
+
+## 🚀 Deploy Your Own Website
+
+⚡ Launch your own professional website in under 2 minutes — no setup required.
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/nestlydigital/nextjs-client-website-starter&project-name=client-website&repository-name=client-website&demo-title=Next.js%20Client%20Website%20Starter&demo-description=Production-ready%20starter%20template%20for%20building%20modern%20client%20websites%20fast&demo-url=https://nextjs-client-website-starter.vercel.app/)
+
+---
+
+## 🖼 Website Preview
+
+### 🏠 Homepage
+
+![Homepage](public/preview/preview-homepage.png)
+
+---
+
+### 🛠 Services Section
+
+![Services](public/preview/preview-services.png)
+
+---
+
+### 🏗 Projects / Portfolio
+
+![Projects](public/preview/preview-projects.png)
+
+---
+
+### 📱 Mobile Responsive View
+
+![Mobile](public/preview/preview-mobile.png)
+
+---
+
 ## 🌐 What This Template Is
 
 This is not just a template — it's a **complete system for building client websites efficiently**.
@@ -64,24 +106,12 @@ This starter comes with all essential pages for modern business websites:
 
 ## 🛠 Tech Stack
 
-- Next.js  
+- Next.js (latest version)  
 - React  
 - JavaScript / TypeScript  
-- Modern CSS / Tailwind (optional)  
+- Modern CSS / Tailwind  
 
 Optimized for deployment on **Vercel**.
-
----
-
-## 🖥 Live Demo (Optional)
-
-Add your demo link here:
-
-```
-
-[https://your-demo.vercel.app](https://your-demo.vercel.app)
-
-````
 
 ---
 
